@@ -1,0 +1,13 @@
+#logo {
+  font-family: 'Bungee', cursive;
+  position: fixed;
+  height: 90px;
+  width: 100vw;
+  z-index: 1;
+  background-color: #4056A1;
+  color: #FFFF;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
