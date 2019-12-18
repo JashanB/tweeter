@@ -17,7 +17,7 @@ const createTweetElement = function(tweet) {
 //loops through tweet data and appends each tweet to section tweet container
 const renderTweets = function(tweets) {
   tweets.forEach(tweet => {
-    $('#tweet-container').append(createTweetElement(tweet));
+    $('#tweet-container').prepend(createTweetElement(tweet));
   })
 }
 
@@ -30,7 +30,7 @@ $(document).ready(function() {
     console.log(formInput)
     if (!formInput) {
       alert('No tweet inputed');
-    } else if (formInput.length >140) {
+    } else if (formInput.length > 140) {
       alert('Character limit exceeded');
     } else {
       $.post({type: "POST", url: '/tweets', data: $('#compose-tweet').serialize(), success: () => {
@@ -43,9 +43,13 @@ $(document).ready(function() {
     $.ajax('/tweets', {method: 'GET'})
     .then(function (tweets) {
       console.log('tweets processed')
-      renderTweets(tweets)
+      renderTweets(tweets);
     })
   }
-  loadTweets();
+  //when form is submitted, loads tweets from /tweets
+  $('#compose-tweet').submit(function () {
+    event.preventDefault();
+    loadTweets();
+  })
 })
 
