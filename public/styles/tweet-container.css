@@ -1,0 +1,32 @@
+.tweet-container {
+  border: solid dimgrey;
+  margin-top: 4%;
+}
+
+.tweet-container .tweet-holder {
+  margin: 2%;
+}
+
+.tweet-container div {
+  border-bottom: 2px solid dimgrey;
+  font-size: 20px;
+  padding-top: 2%;
+}
+.tweet-holder footer {
+  padding-left: 2%;
+  padding-right: 2%;
+  font-size: 15px;
+}
+
+.tweet-container .tweet-holder header .one {
+  font-size: 22px;  
+}
+
+.tweet-container .tweet-holder header .two {
+  font-size: 22px;  
+}
+
+.tweet-container article img {
+  float: right;
+  transform: translateY(-90%);
+}
