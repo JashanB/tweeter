@@ -13,18 +13,20 @@
 
 #tweet-container article .display-name {
   font-size: 22px;
+  font-weight: bold;
 }
 
 #tweet-container article .twitter-tag {
   font-size: 22px;
   float: right;
+  font-weight: bold;
 }
 
 #tweet-container article header img {
   float: left;
   transform: translateY(-20%);
   padding-right: 9px;
-  width: 7%;
+  width: 4%;
 }
 
 #tweet-container article:hover {
@@ -32,7 +34,7 @@
 }
 
 #tweet-container article div {
-  border-bottom: 2.5px solid #c5a6b1;
+  border-bottom: 2.5px solid #bdadb2;
   font-size: 20px;
   padding-top: 12px;
   margin-top: 8px;
