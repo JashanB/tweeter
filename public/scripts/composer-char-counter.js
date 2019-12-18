@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("#text-area").on("keyup", function () {
+  $(".text-area").on("keyup", function () {
     let length = $(this).val().length;
     $(this).parent().children("span").text((140 - length));
     if (length <= 140) {
