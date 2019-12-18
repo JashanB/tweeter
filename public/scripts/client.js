@@ -1,9 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 const tweetData = [
   {
     "user": {
@@ -28,13 +22,14 @@ const tweetData = [
     "created_at": 1461113959088
   }
 ]
+//creates tweet element and appends to section tweet container
 const createTweetElement = function(tweet) {
   const $tweet = $('<article>').addClass('tweet');
-  const date = Math.floor((Date.now() - tweet.created_at) / 86400000);
+  const date = Math.floor((Date.now() - tweet.created_at) / 86400000); //converts miliseconds to days
   const htmlCode = `
   <header>
-    <span class="span-one">${tweet.user.name}</span>
-    <span class="span-two">${tweet.user.handle}</span>
+    <span class="display-name">${tweet.user.name}</span>
+    <span class="twitter-tag">${tweet.user.handle}</span>
     <img src=${tweet.user.avatars}/>
   </header>
   <div>${tweet.content.text}</div>
@@ -43,17 +38,13 @@ const createTweetElement = function(tweet) {
   $tweet.append(htmlCode);
   return $tweet;
 }
-
-const $tweet = createTweetElement(tweetData[0]);
-$(document).ready(function() {
-  $('#tweet-container').append($tweet);
-})
-
+//loops through tweet data and appends each tweet to section tweet container
 const renderTweets = function(tweets) {
-// loops through tweets
-// calls createTweetElement for each tweet
-// takes return value and appends it to the tweets container
+  tweets.forEach(tweet => {
+    $('#tweet-container').append(createTweetElement(tweet));
+  })
 }
 
-
-renderTweets(tweetData);
+$(document).ready(function() {
+  renderTweets(tweetData);
+})

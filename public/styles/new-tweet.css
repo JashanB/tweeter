@@ -1,8 +1,8 @@
-.new-tweet {
+#new-tweet {
   margin: 0 auto;
 }
 
-#text-area {
+#new-tweet .text-area {
   width: 100%;
   border-bottom: 2px solid black;
   padding-top: 1.5%;
@@ -15,13 +15,13 @@
   height: 52px;
 }
 
-#span-tweet {
+#new-tweet form span {
   float: right;
   font-family: bungee, cursive;
   font-size: smaller;
 }
 
-#tweet-button {
+#new-tweet form input {
   border: none;
   color: white;
   text-align: center;

@@ -36,33 +36,23 @@
     <span>tweeter</span>
   </nav>
   <header id="tweeter-header">
-    <div id="avatar-image">
+    <div class="avatar-image">
       <img src="/images/profile-hex.png">
     </div>
     <br>
-    <div id="name-header">
+    <div class="name-header">
       <h2>Your Name</h2>
     </div>
   </header>
-  <!-- Page-specific (main) content here -->
   <main class="container">
-    <section class="new-tweet">
+    <section id="new-tweet">
       <form method="POST" action="/tweets/">
-        <textarea name="text" id="text-area" placeholder="What are you humming about?"></textarea>
-        <input id="tweet-button" type="submit" value="Tweet">
-        <span class="counter" id="span-tweet">140</span>
+        <textarea name="text" class="text-area" placeholder="What are you humming about?"></textarea>
+        <input class="tweet-button" type="submit" value="Tweet">
+        <span class="counter">140</span>
       </form>
     </section>
     <section id="tweet-container">
-      <article class="tweet">
-        <header>
-          <span class="span-one">Name</span>
-          <span class="span-two">@Name</span>
-          <img src="/images/face.png">
-        </header>
-        <div>Sample Text</div>
-        <footer>10 days ago<img src="/images/twitter-share.png"></footer>
-      </article>
     </section>
   </main>
 </body>

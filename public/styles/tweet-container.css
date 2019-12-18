@@ -1,21 +1,21 @@
  #tweet-container {
   border: solid dimgrey;
-  margin-top: 4%;
-  padding-top: 2%;
-  padding-right: 2%;
-  padding-left: 2%;
-  padding-bottom: 1%;
-}
-#tweet-container article {
-  margin-bottom: 3%;
-  padding-top: 2%;
+  padding-top: 18px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-top: 13px;
 }
 
-#tweet-container article .span-one {
+#tweet-container article {
+  padding-bottom: 14px;
+  margin-top: 5px;
+}
+
+#tweet-container article .display-name {
   font-size: 22px;
 }
 
-#tweet-container article .span-two {
+#tweet-container article .twitter-tag {
   font-size: 22px;
   float: right;
 }
@@ -23,8 +23,8 @@
 #tweet-container article header img {
   float: left;
   transform: translateY(-20%);
-  padding-right: 1%;
-  width: 9%;
+  padding-right: 9px;
+  width: 7%;
 }
 
 #tweet-container article:hover {
@@ -32,17 +32,20 @@
 }
 
 #tweet-container article div {
-  border-bottom: 2px solid dimgrey;
+  border-bottom: 2.5px solid #c5a6b1;
   font-size: 20px;
-  padding-top: 2%;
-  padding-bottom: 1%;
-  margin-top: 2%;
+  padding-top: 12px;
+  margin-top: 8px;
+  padding-bottom: 4px;
+  padding-right: 8px;
+  padding-left: 8px;
 }
 #tweet-container article footer {
-  padding-left: 2%;
-  padding-right: 2%;
+  padding-left: 8px;
+  padding-right: 8px;
   font-size: 15px;
 }
+
 #tweet-container article img {
   float: right;
 }

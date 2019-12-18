@@ -7,10 +7,10 @@
  background-color: #ead6dd;
  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
 }
-#avatar-image {
+#tweeter-header .avatar-image {
   transform: translateY(35%);
 }
-#name-header {
+#tweeter-header .name-header {
   transform: translateY(130%);
 }
 
