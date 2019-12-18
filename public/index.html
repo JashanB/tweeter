@@ -1,67 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,400,700,700i&display=swap" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,400,700,700i&display=swap"
+    rel="stylesheet">
 
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
-    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
-    <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+  <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-  </head>
+  <!-- External JS -->
+  <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav id="logo">
-      <span>tweeter</span>
-    </nav>
-    <header id="tweeter-header">
-      <div id="avatar-image">
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div id="name-header">
-          <h2>Your Name</h2>
-      </div>
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+</head>
+
+<body>
+  <!-- Top nav bar (fixed) -->
+  <nav id="logo">
+    <span>tweeter</span>
+  </nav>
+  <header id="tweeter-header">
+    <div id="avatar-image">
+      <img src="/images/profile-hex.png">
+    </div>
+    <br>
+    <div id="name-header">
+      <h2>Your Name</h2>
+    </div>
   </header>
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <form method="POST" action="/tweets/">
-          <textarea name="text" id="text-area" placeholder="What are you humming about?"></textarea>
-          <input id="tweet-button" type="submit" value="Tweet">
-          <span class="counter" id="span-tweet">140</span>
-        </form>
-      </section>
-    <div class="tweet-container">
-      <article class ="tweet-holder">
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+    <section class="new-tweet">
+      <form method="POST" action="/tweets/">
+        <textarea name="text" id="text-area" placeholder="What are you humming about?"></textarea>
+        <input id="tweet-button" type="submit" value="Tweet">
+        <span class="counter" id="span-tweet">140</span>
+      </form>
+    </section>
+    <section id="tweet-container">
+      <article class="tweet">
         <header>
-          <span class="one">Name</span>
-          <span class="two">(@Name)</span>
+          <span class="span-one">Name</span>
+          <span class="span-two">@Name</span>
+          <img src="/images/face.png">
         </header>
-          <div>Sample Text</div>
-        <footer>10 days ago</footer>
-        <img src="/images/twitter-share.png"> 
-        </article>
-      </div>
-    </main>
-  </body>
+        <div>Sample Text</div>
+        <footer>10 days ago<img src="/images/twitter-share.png"></footer>
+      </article>
+    </section>
+  </main>
+</body>
+
 </html>
