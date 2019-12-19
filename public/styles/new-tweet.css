@@ -36,4 +36,11 @@
   background-color: #FFD2D2;
   margin-top: 2em;
   text-align: center;
+  transform: translateY(50%);
+}
+
+@media (min-width: 1024px) {
+  #new-tweet {
+    margin-top: -30px;
+  }
 }

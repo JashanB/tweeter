@@ -29,6 +29,9 @@
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   <script type="text/javascript" src="/scripts/hide.js"></script>
+
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
 </head>
 
 <body>
@@ -36,27 +39,29 @@
     <span>tweeter</span>
     <button id="write-new-tweet" type="button">Write a new tweet</button>
   </nav>
-  <header id="tweeter-header">
-    <div class="avatar-image">
-      <img src="/images/profile-hex.png">
-    </div>
-    <br>
-    <div class="name-header">
-      <h2>Your Name</h2>
-    </div>
-  </header>
-  <main class="container">
-    <section id="new-tweet">
-      <div id="error"></div>
-      <form id="compose-tweet" method="POST" action="/tweets/">
-        <textarea name="text" class="text-area" placeholder="What are you humming about?"></textarea>
-        <input class="tweet-button" type="submit" value="Tweet">
-        <span class="counter">140</span>
-      </form>
-    </section>
-    <section id="tweet-container">
-    </section>
-  </main>
+  <div class="page-container">
+    <header id="tweeter-header">
+      <div class="avatar-image">
+        <img src="/images/profile-hex.png">
+      </div>
+      <br>
+      <div class="name-header">
+        <h2>Your Name</h2>
+      </div>
+    </header>
+    <main class="container">
+      <section id="new-tweet">
+        <div id="error"></div>
+        <form id="compose-tweet" method="POST" action="/tweets/">
+          <textarea name="text" class="text-area" placeholder="What are you humming about?"></textarea>
+          <input class="tweet-button" type="submit" value="Tweet">
+          <span class="counter">140</span>
+        </form>
+      </section>
+      <section id="tweet-container">
+      </section>
+    </main>
+  </div>
 </body>
 
 </html>

@@ -1,12 +1,14 @@
 #tweeter-header {
  height: 400px;
  width: 100vw;
- text-align: center;
  margin:  0 auto;
-
  background-color: #ead6dd;
  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+ flex-direction: column;
+ justify-content: center;
+ text-align: center;
 }
+
 #tweeter-header .avatar-image {
   transform: translateY(35%);
 }
@@ -14,3 +16,8 @@
   transform: translateY(130%);
 }
 
+@media (min-width: 1024px) {
+  #tweeter-header {
+    width: 40%;
+  }
+}

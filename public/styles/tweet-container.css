@@ -1,8 +1,15 @@
+ .page-container {
+   display: flex;
+   flex-direction: column;
+}
+
  #tweet-container {
   padding-top: 18px;
   padding-left: 8px;
   padding-right: 8px;
   margin-top: 13px;
+  display: flex;
+  flex-direction: column;
 }
 
 #tweet-container article {
@@ -15,6 +22,7 @@
   word-wrap: break-word;
   font-weight: bold;
   filter: blur(1px);
+  justify-content: space-between;
 }
 
 #tweet-container article .display-name {
@@ -68,3 +76,14 @@
   display: none;
 }
 
+@media (min-width: 1024px) {
+  #tweet-container {
+    justify-content: flex-end;
+  }
+  .page-container {
+    flex-direction: row;
+  }
+  .container {
+    margin-top: 4rem;
+  }
+}
