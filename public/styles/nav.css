@@ -11,3 +11,11 @@
   padding-left: 1.5em;
   padding-right: 1.5em;
 }
+#write-new-tweet {
+  float: right;
+  font-size: 14px;
+  color: white;
+  background-color: #4056A1;
+  border: #4056A1;
+  height: 40px;
+}

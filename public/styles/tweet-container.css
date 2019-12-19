@@ -1,5 +1,4 @@
  #tweet-container {
-  border: solid dimgrey;
   padding-top: 18px;
   padding-left: 8px;
   padding-right: 8px;
@@ -9,6 +8,10 @@
 #tweet-container article {
   padding-bottom: 14px;
   margin-top: 5px;
+  border: solid dimgrey;
+  padding-top: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #tweet-container article .display-name {

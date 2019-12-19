@@ -1,5 +1,11 @@
 //creates tweet element and appends to section tweet container
 const createTweetElement = function(tweet) {
+  //create escape element for tweet content div
+  const escape = function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
   const $tweet = $('<article>').addClass('tweet');
   const date = Math.floor((Date.now() - tweet.created_at) / 86400000); //converts miliseconds to days
   const htmlCode = `
@@ -8,7 +14,7 @@ const createTweetElement = function(tweet) {
     <span class="twitter-tag">${tweet.user.handle}</span>
     <img src=${tweet.user.avatars}/>
   </header>
-  <div>${tweet.content.text}</div>
+  <div>${escape(tweet.content.text)}</div>
   <footer>${date} days ago<img src="/images/twitter-share.png"></footer>
   `
   $tweet.append(htmlCode);
@@ -26,15 +32,13 @@ $(document).ready(function() {
   $('#compose-tweet').submit(function () {
     event.preventDefault();
     let formInput = $('#compose-tweet :input').val();
-    console.log('form submitted');
-    console.log(formInput)
     if (!formInput) {
       alert('No tweet inputed');
     } else if (formInput.length > 140) {
       alert('Character limit exceeded');
     } else {
       $.post({type: "POST", url: '/tweets', data: $('#compose-tweet').serialize(), success: () => {
-        console.log('msg sent');
+        loadTweets();
       }})  
     }
   })
@@ -42,14 +46,9 @@ $(document).ready(function() {
   const loadTweets = function() {
     $.ajax('/tweets', {method: 'GET'})
     .then(function (tweets) {
-      console.log('tweets processed')
       renderTweets(tweets);
     })
   }
-  //when form is submitted, loads tweets from /tweets
-  $('#compose-tweet').submit(function () {
-    event.preventDefault();
-    loadTweets();
-  })
+  loadTweets();
 })
 
