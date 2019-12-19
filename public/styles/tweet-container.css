@@ -12,24 +12,24 @@
   padding-top: 14px;
   padding-left: 10px;
   padding-right: 10px;
+  word-wrap: break-word;
+  font-weight: bold;
 }
 
 #tweet-container article .display-name {
   font-size: 22px;
-  font-weight: bold;
 }
 
 #tweet-container article .twitter-tag {
   font-size: 22px;
   float: right;
-  font-weight: bold;
 }
 
 #tweet-container article header img {
   float: left;
   transform: translateY(-20%);
   padding-right: 9px;
-  width: 4%;
+  width: 57px;
 }
 
 #tweet-container article:hover {
@@ -37,7 +37,7 @@
 }
 
 #tweet-container article div {
-  border-bottom: 2.5px solid #bdadb2;
+  border-bottom: 4px solid #bdadb2;
   font-size: 20px;
   padding-top: 12px;
   margin-top: 8px;

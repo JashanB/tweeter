@@ -7,7 +7,10 @@ const createTweetElement = function(tweet) {
     return div.innerHTML;
   }
   const $tweet = $('<article>').addClass('tweet');
-  const date = Math.floor((Date.now() - tweet.created_at) / 86400000); //converts miliseconds to days
+  let date = Math.floor((Date.now() - tweet.created_at) / 86400000); //converts miliseconds to days
+  if (date < 0) {
+    date = 0;
+  }
   const htmlCode = `
   <header>
     <span class="display-name">${tweet.user.name}</span>
@@ -33,13 +36,17 @@ $(document).ready(function() {
     event.preventDefault();
     let formInput = $('#compose-tweet :input').val();
     if (!formInput) {
-      alert('No tweet inputed');
+      $('#error').show();
+      $('#error').text('No tweet inputed');
     } else if (formInput.length > 140) {
-      alert('Character limit exceeded');
+      $('#error').show();
+      $('#error').text('Character limit exceeded');
     } else {
+      $('#error').hide();
       $.post({type: "POST", url: '/tweets', data: $('#compose-tweet').serialize(), success: () => {
-        loadTweets();
+        loadTweets(); //loads new tweets
       }})  
+      $("#compose-tweet").trigger('reset');
     }
   })
   //load tweets posted to /tweets
@@ -49,6 +56,7 @@ $(document).ready(function() {
       renderTweets(tweets);
     })
   }
+  //loads current tweets in history
   loadTweets();
 })
 

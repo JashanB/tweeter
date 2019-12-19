@@ -18,4 +18,9 @@
   background-color: #4056A1;
   border: #4056A1;
   height: 40px;
+  cursor: pointer; 
+  transform: translateY(-5px);
+}
+#write-new-tweet:hover {
+  color: #ead6dd;
 }

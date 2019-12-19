@@ -30,3 +30,10 @@
   padding-left: 8px;
   background-color: #4056A1;
 }
+
+#error {
+  color: #D8000C;
+  background-color: #FFD2D2;
+  margin-top: 2em;
+  text-align: center;
+}
