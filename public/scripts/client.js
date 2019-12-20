@@ -38,7 +38,7 @@ const currentTime = function(time) {
 const createTweetElement = function(tweet) {
   //create escape element for tweet content div
   const escape = function(str) {
-    let div = document.createElement('div');
+    const div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
@@ -67,7 +67,7 @@ $(document).ready(function() {
   //submit tweet to /tweets
   $('#compose-tweet').submit(function() {
     event.preventDefault();
-    let formInput = $('#compose-tweet :input').val();
+    const formInput = $('#compose-tweet :input').val();
     if (!formInput) {
       $('#error').show();
       $('#error').text('No tweet inputed');
